@@ -12,8 +12,6 @@ Instead of using one single LLM call, DraftLoop uses a structured LangGraph work
 
 ## Screenshots
 
-Add your three screenshots here after you upload them to the repo, for example inside `frontend/public/` or a root `docs/` folder.
-
 ![Landing Page](./docs/landing-page.png)
 ![Review Screen](./docs/review-screen.png)
 ![History + Export Pack](./docs/history-export.png)
@@ -186,16 +184,16 @@ sequenceDiagram
 
 ## LangGraph Concepts Used
 
-| Concept | Where it appears |
-|---|---|
-| `StateGraph` | `backend/app/graph/graph.py` |
-| Typed shared state | `backend/app/graph/state.py` |
-| Parallel fan-out with `Send` | `backend/app/graph/routing.py` |
-| Fan-in to critic | `backend/app/graph/graph.py` |
-| Human interrupt with `interrupt_before` | `backend/app/graph/graph.py` |
-| Conditional regeneration routing | `backend/app/graph/routing.py` |
-| Checkpoint persistence with `MemorySaver` | `backend/app/graph/graph.py` |
-| Resume after approval/regeneration | `backend/app/api/routes/approve.py`, `regenerate.py` |
+| Concept                                   | Where it appears                                     |
+| ----------------------------------------- | ---------------------------------------------------- |
+| `StateGraph`                              | `backend/app/graph/graph.py`                         |
+| Typed shared state                        | `backend/app/graph/state.py`                         |
+| Parallel fan-out with `Send`              | `backend/app/graph/routing.py`                       |
+| Fan-in to critic                          | `backend/app/graph/graph.py`                         |
+| Human interrupt with `interrupt_before`   | `backend/app/graph/graph.py`                         |
+| Conditional regeneration routing          | `backend/app/graph/routing.py`                       |
+| Checkpoint persistence with `MemorySaver` | `backend/app/graph/graph.py`                         |
+| Resume after approval/regeneration        | `backend/app/api/routes/approve.py`, `regenerate.py` |
 
 ## Project Structure
 
@@ -329,14 +327,14 @@ DraftLoop/
 
 ## API Endpoints
 
-| Method | Route | Purpose |
-|---|---|---|
-| `POST` | `/api/generate` | Start a new run |
-| `GET` | `/api/status/{thread_id}` | Stream graph progress via SSE |
-| `POST` | `/api/approve` | Approve one or more drafts |
-| `POST` | `/api/regenerate` | Regenerate selected drafts |
-| `GET` | `/api/runs/{thread_id}` | Fetch a graph snapshot by thread id |
-| `GET` | `/health` | Health check |
+| Method | Route                     | Purpose                             |
+| ------ | ------------------------- | ----------------------------------- |
+| `POST` | `/api/generate`           | Start a new run                     |
+| `GET`  | `/api/status/{thread_id}` | Stream graph progress via SSE       |
+| `POST` | `/api/approve`            | Approve one or more drafts          |
+| `POST` | `/api/regenerate`         | Regenerate selected drafts          |
+| `GET`  | `/api/runs/{thread_id}`   | Fetch a graph snapshot by thread id |
+| `GET`  | `/health`                 | Health check                        |
 
 ## Environment Variables
 
@@ -431,8 +429,9 @@ http://localhost:5173
 8. Edit the `Regeneration Prompt` for any platform you want rewritten
 9. Approve drafts one by one
 10. Once all are approved:
-   - save to local history
-   - export as Markdown / Notion / copy bundle / social kit
+
+- save to local history
+- export as Markdown / Notion / copy bundle / social kit
 
 ## Export Options
 
@@ -492,9 +491,9 @@ uv run uvicorn app.main:app --reload --port 8000
 python -m compileall app
 ```
 
-## Why This Project Is Strong
+## Project Highlights
 
-DraftLoop is more than a wrapper around one LLM call. It demonstrates:
+DraftLoop is more than a wrapper around one LLM call. Key capabilities include:
 
 - agent specialization
 - parallel graph execution
@@ -507,7 +506,7 @@ DraftLoop is more than a wrapper around one LLM call. It demonstrates:
 
 ## Future Improvements
 
-Some good next steps if you want to keep evolving it:
+Planned and potential next steps:
 
 - ZIP export with multiple files
 - authentication + cloud sync
@@ -515,14 +514,6 @@ Some good next steps if you want to keep evolving it:
 - more platform agents
 - prompt/version tracking for experiments
 - persistent backend storage instead of in-memory checkpoints
-
-## License
-
-Add your preferred license here, for example:
-
-```text
-MIT
-```
 
 ## Author
 
