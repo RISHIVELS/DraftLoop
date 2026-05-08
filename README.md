@@ -14,11 +14,9 @@ Instead of using one single LLM call, DraftLoop uses a structured LangGraph work
 
 Add your three screenshots here after you upload them to the repo, for example inside `frontend/public/` or a root `docs/` folder.
 
-```md
 ![Landing Page](./docs/landing-page.png)
 ![Review Screen](./docs/review-screen.png)
 ![History + Export Pack](./docs/history-export.png)
-```
 
 Suggested captions:
 
