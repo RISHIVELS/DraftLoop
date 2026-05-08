@@ -16,12 +16,6 @@ Instead of using one single LLM call, DraftLoop uses a structured LangGraph work
 ![Review Screen](./docs/review-screen.png)
 ![History + Export Pack](./docs/history-export.png)
 
-Suggested captions:
-
-- `Landing Page` — hero section, pipeline architecture, workflow simulation
-- `Review Screen` — 3 draft cards, live diff, preview mode, approval flow
-- `History + Export Pack` — saved runs, read-only review, export pack actions
-
 ## What Problem It Solves
 
 Repurposing a good article into multiple channels is repetitive and slow. A creator might write one strong long-form piece, then spend another 1-2 hours manually rewriting it for:
